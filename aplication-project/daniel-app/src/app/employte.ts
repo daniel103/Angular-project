@@ -1,4 +1,3 @@
-import { CurrencyPipe } from "@angular/common";
 export interface Employee {
 
     id: number;
@@ -6,4 +5,7 @@ export interface Employee {
     fname: string;
     
     lname: string;
+    email: string;
+    salary: string;
+    dateofbirth: string;
 }

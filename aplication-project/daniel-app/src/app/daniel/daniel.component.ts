@@ -15,6 +15,9 @@ export class DanielComponent implements OnInit {
   fname: 'alex',
   
   lname: 'daniel',
+  email: 'danl3654321@gmail.com',
+  salary: '15,000',
+  dateofbirth: '01/10/1999',
 }
 
 
@@ -25,6 +28,10 @@ employee1: Employee = {
   fname: 'alex',
   
   lname: 'daniel',
+
+  email: 'alex1234@gmail.com',
+  salary: '20,000',
+  dateofbirth: '01/10/1999',
 }
   constructor() { }
 
