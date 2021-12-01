@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employte';
+import { EMPLOYEES } from '../list-employes';
 
 @Component({
   selector: 'app-daniel',
@@ -8,31 +9,16 @@ import { Employee } from '../employte';
 })
 export class DanielComponent implements OnInit {
 
-  employee: Employee = {
+  employees = EMPLOYEES;
 
-  id: 256486214,
-  
-  fname: 'alex',
-  
-  lname: 'daniel',
-  email: 'danl3654321@gmail.com',
-  salary: '15,000',
-  dateofbirth: '01/10/1999',
+  selectedEmployee?: Employee;
+
+onSelect(employee: Employee): void {
+
+this.selectedEmployee = employee;
+
 }
 
-
-employee1: Employee = {
-
-  id: 256486214,
-  
-  fname: 'alex',
-  
-  lname: 'daniel',
-
-  email: 'alex1234@gmail.com',
-  salary: '20,000',
-  dateofbirth: '01/10/1999',
-}
   constructor() { }
 
   ngOnInit(): void {

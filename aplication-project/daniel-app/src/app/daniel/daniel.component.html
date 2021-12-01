@@ -1,58 +1,57 @@
-<h2>{{employee.fname}} Details</h2>
+<h2>My Staff</h2>
 
-<div><span>id: </span>{{employee.id}}</div>
+<!-- <table class="employees"> -->
+    <table class="employees">
+        <tr class="e">
+            <th class="d">works number</th>
+            <th class="d">first name</th> 
+            <th class="d">family name</th> 
+            <th class="d">id</th>
+            <th class="d">email</th>
+            <th class="d">salary</th>
+            <th class="d">dateofbirth</th>
+        </tr>
+    <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee" (click)="onSelect(employee)"  class="employees">
+    
+    <!-- <div class="badge"> -->
+        <input type="checkbox" class="badge">
+        <td class="badge">{{employee.lname}}</td>
+        <td class="badge">{{employee.fname}}</td>
+        <td class="badge">{{employee.id}}</td>
+        <td class="badge">{{employee.email}}</td>
+        <td class="badge">{{employee.salary}}</td>
+        <td class="badge">{{employee.dateofbirth}}</td>
 
-<div><span>First Name: </span>{{employee.fname}}</div>
+    <!-- </div> -->
 
-<div><span>Last Name: </span>{{employee.lname}}</div>
-
-<div><span>Email: </span>{{employee.email}}</div>
-
-<div><span>salary: </span>{{employee.salary}}</div>
-
-<div><span>bithriday: </span>{{employee.dateofbirth}}</div>
-
-<h2>{{employee1.fname | uppercase }} Details</h2>
-
-<div><span>id: </span>{{employee1.id}}</div>
-
-<div><span>First Name: </span>{{employee1.fname}}</div>
-
-<div><span>Last Name: </span>{{employee1.lname}}</div>
-
-
-<div><span>Email: </span>{{employee1.email}}</div>
-
-<div><span>salary: </span>{{employee1.salary}}</div>
-
-<div><span>bithriday: </span>{{employee.dateofbirth}}</div>
-
-<h2>{{employee1.fname | uppercase }} Details</h2>
-
-<div><span>id: </span>{{employee1.id}}</div>
-
-<div><span>First Name: </span>{{employee1.fname}}</div>
-
-<div><span>Last Name: </span>{{employee1.lname}}</div>
+    </tr>
+    </table>
 
 
-<div><span>Email: </span>{{employee1.email}}</div>
+<div *ngIf="selectedEmployee">
 
-<div><span>salary: </span>{{employee1.salary}}</div>
-
-<div><span>bithriday: </span>{{employee.dateofbirth}}</div>
-
-<h2>{{employee1.fname | uppercase }} Details</h2>
-
-<div><span>id: </span>{{employee1.id}}</div>
-
-<div><span>First Name: </span>{{employee1.fname}}</div>
-
-<div><span>Last Name: </span>{{employee1.lname}}</div>
-
-
-<div><span>Email: </span>{{employee1.email}}</div>
-
-<div><span>salary: </span>{{employee1.salary}}</div>
-
-<div><span>bithriday: </span>{{employee.dateofbirth}}</div>
+    <h2>{{selectedEmployee.fname | uppercase}} {{selectedEmployee.lname |
+    uppercase}} Details</h2>
+    
+    <div><span>id: </span>{{selectedEmployee.id}}</div>
+    <div><span>dateofbirth: </span>{{selectedEmployee.dateofbirth}}</div>
+    <div><span>email: </span>{{selectedEmployee.email}}</div>
+    <div><span>salary: </span>{{selectedEmployee.salary}}</div>
+    
+    <div>
+    
+    <label for="employee-fname">Employee first name: </label>
+    
+    <input id="employee-fname" [(ngModel)]="selectedEmployee.fname"
+    placeholder="fname">
+    
+    <br>
+    
+    <label for="employee-lname">Employee last name: </label>
+    
+    <input id="employee-lname" [(ngModel)]="selectedEmployee.lname"
+    placeholder="lname">
+    
+    </div>
+    
+    </div>
