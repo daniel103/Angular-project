@@ -1,6 +1,5 @@
 <h2>My Staff</h2>
 
-<!-- <table class="employees"> -->
     <table class="employees">
         <tr class="e">
             <th class="d">works number</th>
@@ -12,8 +11,7 @@
             <th class="d">dateofbirth</th>
         </tr>
     <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee" (click)="onSelect(employee)"  class="employees">
-    
-    <!-- <div class="badge"> -->
+
         <input type="checkbox" class="badge">
         <td class="badge">{{employee.lname}}</td>
         <td class="badge">{{employee.fname}}</td>
@@ -21,8 +19,6 @@
         <td class="badge">{{employee.email}}</td>
         <td class="badge">{{employee.salary}}</td>
         <td class="badge">{{employee.dateofbirth}}</td>
-
-    <!-- </div> -->
 
     </tr>
     </table>
@@ -55,3 +51,4 @@
     </div>
     
     </div>
+<br>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { Picon } from '../employte';
-// import { icon } from '../list-employes';
+import { btnIcon } from '../list-icon';
 
 @Component({
   selector: 'app-fooer',
@@ -9,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooerComponent implements OnInit {
 
-  // Picon = icon;
+  btnicons = btnIcon;
 
   constructor() { }
 

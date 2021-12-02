@@ -1,5 +1,4 @@
 import { Employee } from './employte';
-// import { Picon } from './employte';
 
 export const EMPLOYEES: Employee[] = [
 
@@ -27,12 +26,3 @@ export const EMPLOYEES: Employee[] = [
 
 { id: 15206873, fname: 'Tom', lname: 'Vaknin', email: 'Tm@gamil.com', salary: '19,000$', dateofbirth: '12/03/1985'},
 ];
-
-
-// export const icon: Picon[] = [
-// {link:'https://he-il.facebook.com', icone:'fab fa-facebook', par:'Facbook'},
-// {link:'https://twitter.com/?lang=he', icone:'fab fa-twitter', par:'twitter'},
-// {link:'https://myaccount.google.com', icone:'fab fa-google-plus-square', par:'google plus'},
-// {link:'https://www.linkedin.com', icone:'fab fa-linkedin', par:'linkdin'},
-// {link:'https://www.instagram.com', icone:'fab fa-instagram', par:'instagram'},
-// ];

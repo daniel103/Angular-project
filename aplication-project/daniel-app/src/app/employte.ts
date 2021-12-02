@@ -9,9 +9,3 @@ export interface Employee {
     salary: string;
     dateofbirth: string;
 }
-
-// export interface Picon {
-//     link:string;
-//     icone:string;
-//     par:string;
-// }

@@ -1,35 +1,13 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
-
-<!-- <div *ngFor="let Picon of Picon" class="container"> -->
-
-    <!-- <a href={{Picon.link}}></a>
-    <i>{{Picon.icone}}</i>
-    <p>{{Picon.par}}</p> -->
-
-<div class="container">
-    <a href="https://he-il.facebook.com">
-        <i class="fab fa-facebook"></i>
-        <p>Facbook</p>
-    </a>
-    <a href="https://twitter.com/?lang=he">
-        <i class="fab fa-twitter"></i>
-        <p>twitter</p>
-    </a>
-    <a href="https://myaccount.google.com">
-        <i class="fab fa-google-plus-square"></i>
-        <p>google plus</p>
-    </a>
-    <a href="https://www.linkedin.com">
-        <i class="fab fa-linkedin"></i>
-        <p>linkdin</p>
-    </a>
-    <a href="https://www.instagram.com">
-        <i class="fab fa-instagram"></i>
-        <p>instagram</p>
-    </a>
-    <p id="p">כל הזכויות שמורות &copy;</p>
-</div>
+<footer>
+    <div class="container">
+        <div>
+            <span *ngFor="let btnicon of btnicons">
+                <a href="{{ btnicon.url }}" target="_blank"><img src="{{ btnicon.icon }}" alt="{{ btnicon.name }}"/></a>
+            </span> 
+        </div>
+     <p class="container">כל הזכויות שמורות &copy;</p>
+    </div>
+</footer>
 
 
 
