@@ -1,0 +1,12 @@
+input{
+    padding: .3em;
+    margin: 5px;
+}
+
+#work{
+    margin-left: 110px;
+    margin-top: 50px;
+    border: #39979f 4px solid;
+    background-color: burlywood;
+    font-size: 20px;
+}

@@ -1,0 +1,17 @@
+<div *ngIf="employee" class="detail" id="work">
+    <div>
+    <h2>{{employee.fname | uppercase}} {{employee.lname |uppercase}} Details</h2>
+        <div><span>id: </span>{{employee.id}}</div>
+    <label for="employee-fname">Employee first name: </label>
+        <input id="employee-fname" [(ngModel)]="employee.fname" placeholder="fname">
+    <br>
+        <label for="employee-lname">Employee last name: </label>
+        <input id="employee-lname" [(ngModel)]="employee.lname" placeholder="lname">
+    <br>
+    <div><span>dateofbirth: </span>{{employee.dateofbirth}}</div>
+        <div><span>salary: </span>{{employee.salary}}</div>
+            <label for="employee-lname">E-mail: </label>
+        <a href="mailto:{{employee.email}}">{{employee.email}}</a>
+    </div>
+</div>
+<br>

@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employte';
 import { EMPLOYEES } from '../list-employes';
