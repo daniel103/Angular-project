@@ -6,6 +6,7 @@ import { DanielComponent } from './daniel/daniel.component';
 import { FormsModule } from '@angular/forms';
 import { FooerComponent } from './fooer/fooer.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     DanielComponent,
     FooerComponent,
     EmployeeDetailComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
