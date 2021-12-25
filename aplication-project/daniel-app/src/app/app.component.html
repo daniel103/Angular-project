@@ -1,11 +1,14 @@
 <h1>{{title}}</h1>
 <p>Welcome to our company</p>
-<nav>
+<nav>    <a routerLink="Home">Home page</a>
     <br>
-    <a routerLink="/employees">List of employees</a>
+    <a routerLink="/employess">List of employees</a>
+    <br>   
+    <a routerLink="/employees-routing">List of employees routing</a>
     <br>
-    <a routerLink="/dashboard">deshbord</a>
+    <a routerLink="/dashboard">Top 4 Employers</a>
 </nav>
+<br>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
 <app-fooer></app-fooer>

@@ -13,7 +13,7 @@ h2 {
     align-content: flex-start;
     align-items: flex-start;
 }
-    
+
 a {
     background-color: navy;
     border-radius: 2px;
@@ -27,7 +27,7 @@ a {
     min-width: 70px;
     margin: .5rem auto;
     box-sizing: border-box;
-    cursor: pointer; 
+    cursor: pointer;
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
@@ -36,13 +36,12 @@ a {
 @media (min-width: 600px) {
 
 a {
-    width: 18%;
-    box-sizing: content-box;
+width: 18%;
+box-sizing: content-box;
+    }
 }
 
 a:hover {
-    background-color: #000;
-    }
-} 
-
+background-color: #000;
+}
     

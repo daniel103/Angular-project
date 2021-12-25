@@ -1,17 +1,29 @@
-<div *ngIf="employee" class="detail" id="work">
+<div *ngIf="employee" class="detail">
+    <div class="visitcard">
+      <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}}</h2>    
+        <div class="form">
+          <label for="employee-id">ID: </label> {{employee.id}}
+          <label for="employee-fname">Employee first name: </label>
+          <input id="employee-fname" [(ngModel)]="employee.fname" placeholder="fname">
+          
+          <label for="employee-lname">Employee last name: </label>
+          <input id="employee-lname" [(ngModel)]="employee.lname" placeholder="lname">
+          
+          <label for="employee-dateofbirth">Date of birth: </label> 
+          <input id="employee-dateofbirth" [(ngModel)]="employee.dateofbirth" placeholder="dateofbirth">   
+          
+          <label for="employee-salary">Salary: </label>
+          <input id="employee-salary" [(ngModel)]="employee.salary" placeholder="salary">
+        
+          <label for="employee-salary">E-mail: </label>
+          <div><input id="employee-email" [(ngModel)]="employee.email" placeholder="email"> <input type="button" value="Send email" (click)="onSelect(employee)"></div>
+        </div>
+      </div>
+    <button (click)="save()">Save</button>
+    <br>
+    <button (click)="goBack()">Go back</button>
+    <br> <br>
     <div>
-    <h2>{{employee.fname | uppercase}} {{employee.lname |uppercase}} Details</h2>
-        <div><span>id: </span>{{employee.id}}</div>
-    <label for="employee-fname">Employee first name: </label>
-        <input id="employee-fname" [(ngModel)]="employee.fname" placeholder="fname">
-    <br>
-        <label for="employee-lname">Employee last name: </label>
-        <input id="employee-lname" [(ngModel)]="employee.lname" placeholder="lname">
-    <br>
-    <div><span>dateofbirth: </span>{{employee.dateofbirth}}</div>
-        <div><span>salary: </span>{{employee.salary}}</div>
-            <label for="employee-lname">E-mail: </label>
-        <a href="mailto:{{employee.email}}">{{employee.email}}</a>
+      <app-message-employs [employee]="selectedEmployee"></app-message-employs>
     </div>
 </div>
-<br>

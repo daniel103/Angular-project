@@ -1,0 +1,36 @@
+<h2>My Staff</h2>
+<div>
+    <label for="new-employee">Employee First Name: </label>
+    <input id="new-employee" #employeeName />
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="add(employeeName.value);
+    employeeName.value=''">
+    Add Employee
+    </button>
+    <br>
+    <br>
+</div>
+<div class="detail">
+<table class="employees">
+    <tr class="e">
+        <th class="d">change</th>
+        <th class="d">first name</th> 
+        <th class="d">family name</th> 
+        <th class="d">id</th>
+        <th class="d">email</th>
+        <th class="d">salary</th>
+        <th class="d">dateofbirth</th>
+    </tr>
+    <tr *ngFor="let employee of employees" class="employees">
+        <td class="badge"><button class="delete" title="delete employee" (click)="delete(employee)">x</button></td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.lname}}</td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.fname}}</td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.id}}</td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.email}}</td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.salary}}</td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.dateofbirth}}</td>
+    </tr>
+</table>
+<app-employee-detail></app-employee-detail>
+</div>
+<br>

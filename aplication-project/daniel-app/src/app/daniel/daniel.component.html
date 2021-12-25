@@ -10,7 +10,7 @@
             <th class="d">salary</th>
             <th class="d">dateofbirth</th>
         </tr>
-    <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee" (click)="onSelect(employee)"  class="employees">
+    <tr *ngFor="let employee of employees" class="employees" [class.selected]="employee === selectedEmployee" (click)="onSelect(employee)">
         <input type="checkbox" class="badge">
         <td class="badge">{{employee.lname}}</td>
         <td class="badge">{{employee.fname}}</td>
@@ -20,16 +20,8 @@
         <td class="badge">{{employee.dateofbirth}}</td>
     </tr>
 </table>
-    <app-employee-detail [employee]="selectedEmployee"></app-employee-detail>
+    <div class="deatil">
+        <app-employee-detail [employee]="selectedEmployee"></app-employee-detail>
+    </div>
 </div>
 <br>
-
-<!-- <tr *ngFor="let employee of employees" class="employees">
-    <td class="employees"><input type="checkbox"></td>
-    <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.id}}</a></td>
-    <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.fname}}</a></td>
-    <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.lname}}</a></td>
-    <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.dateofbirth}}</a></td>
-    <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.salary}}</a></td>
-    <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.email}}</a></td>
-</tr> -->
