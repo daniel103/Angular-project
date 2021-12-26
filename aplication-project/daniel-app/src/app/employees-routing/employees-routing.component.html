@@ -27,8 +27,8 @@
             <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.fname}}</td>
             <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.id}}</td>
             <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.email}}</td>
-            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.salary}}</td>
-            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.dateofbirth}}</td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.salary | currency:'ILS'}}</td>
+            <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.dateofbirth | date:'longDate'}}</td>
     </tr>
 </table>
 <app-employee-detail></app-employee-detail>

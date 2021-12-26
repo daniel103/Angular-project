@@ -16,8 +16,8 @@
         <td class="badge">{{employee.fname}}</td>
         <td class="badge">{{employee.id}}</td>
         <td class="badge">{{employee.email}}</td>
-        <td class="badge">{{employee.salary}}</td>
-        <td class="badge">{{employee.dateofbirth}}</td>
+        <td class="badge">{{employee.salary | currency: 'ILS ' :'code':'4.0-2'}}</td>
+        <td class="badge">{{employee.dateofbirth | date: 'dd/mm/YYYY'}}</td>
     </tr>
 </table>
     <div class="deatil">
