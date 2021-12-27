@@ -45,3 +45,18 @@ a:hover {
 background-color: #000;
 }
     
+.button{
+    height: 50px;
+    width: 49px;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 104px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    background-color: rgb(221, 151, 21);
+}
+
+.button:hover{
+    background-color: rgb(6, 113, 175);
+}

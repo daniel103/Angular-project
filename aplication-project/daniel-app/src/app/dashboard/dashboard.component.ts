@@ -25,6 +25,10 @@ constructor(private employeeService: EmployeeService, private messageService: Me
     this.employeeService.getEmployees()
     .subscribe(employees => this.employees = employees.slice(0, 4));
   }
+  getemployees(): void {
+    this.employeeService.getEmployees()
+    .subscribe(employees => this.employees = employees);
+  }
   ngOnInit(): void {
     this.getEmployees();
   }
