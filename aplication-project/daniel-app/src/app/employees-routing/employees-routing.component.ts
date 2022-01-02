@@ -15,7 +15,7 @@ export class EmployeesRoutingComponent implements OnInit {
 
   //employees = EMPLOYEES;
   employees: Employee[] = [];
-
+  show = 5
   selectedEmployee?: Employee;
   onSelect(employee: Employee): void {
   this.selectedEmployee = employee;

@@ -21,7 +21,7 @@
         <th class="d">salary</th>
         <th class="d">dateofbirth</th>
     </tr>
-    <tr *ngFor="let employee of employees" class="employees">
+    <tr *ngFor="let employee of employees | slice:0:show" class="employees">
         <td class="badge"><button class="delete" title="delete employee" (click)="delete(employee)">x</button></td>
             <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.lname}}</td>
             <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.fname}}</td>
@@ -30,6 +30,14 @@
             <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.salary | currency:'ILS'}}</td>
             <td class="badge" routerLink="/detail/{{employee.id}}">{{employee.dateofbirth | date:'longDate'}}</td>
     </tr>
+    <tr *ngIf="show == 5" class="employees">
+        <td colspan="7" class="employees"><button (click)="show = employees.length"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-down-45.png" alt=""/></button>
+        </td>
+      </tr>
+      <tr *ngIf="show == employees.length" class="employees">
+        <td colspan="7" class="employees"><button (click)="show = 5"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-up-45.png" alt="" /></button>
+        </td>
+      </tr>     
 </table>
 <app-employee-detail></app-employee-detail>
 </div>
