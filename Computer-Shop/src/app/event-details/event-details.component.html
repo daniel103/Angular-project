@@ -1,0 +1,28 @@
+<div class="outer">
+    <div>
+        <h1>Welcome to our events!</h1>
+           <h2>Our closest events:</h2>
+           <table class="outer">
+            <thead>
+              <tr class="events">
+                <th>Event number</th>
+                <th>Event</th>
+                <th>Date</th>      
+                <th>Time</th>
+                <th>Address</th>
+                <th>Registration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let event of events; let i=index;" class="events">
+                <td>{{i+1 | number:'1.1-2'}}</td>
+                <td>{{event.name}}</td>
+                <td>{{event.date | date:'dd-MM-yyy'}} </td>      
+                <td>{{event.time}}</td>
+                <td><app-event-address [address]="event.location"></app-event-address></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

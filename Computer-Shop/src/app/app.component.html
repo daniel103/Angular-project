@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+  <h2>My favorite computer provider is: {{compProvider}}</h2>
+  <app-event-details></app-event-details>
+  <hr>
+  <app-counter #countermain></app-counter>
+  <br><br>
+<button (click)="countermain.stopTimer()">Stop Timer from main component</button>

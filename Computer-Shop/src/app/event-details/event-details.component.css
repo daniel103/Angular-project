@@ -1,0 +1,31 @@
+.events {    
+    background-color: coral;
+    padding: 5px;
+}
+
+.outer {    
+    display: inline-block;        
+    margin: 5px 30px;
+}
+
+table {    
+    border-collapse: collapse;   
+}
+
+td {   
+    padding: 0.5em; 
+    border-top: 0.1em solid #ddd;
+    text-align: left; 
+}
+
+th {  
+    margin: 1em;
+    padding: 1.2em;  
+    background-color: navy;
+    color:oldlace;
+    border-bottom: 0.3em solid #ddd;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
