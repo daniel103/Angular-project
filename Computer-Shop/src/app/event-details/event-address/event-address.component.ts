@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EventAddressComponent implements OnInit {
 @Input () address?: any;
+
+button=false
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,3 @@
-{{address?.street}}, {{address?.city}}, {{address?.country}}
+<span [hidden]="button" class="left"><button class="label true" (click)="button=true">Hide Address</button></span>
+<span [hidden]="!button" class="left"><button [hidden]="!button" class="label false" (click)="button=false">Show Address</button></span>
+<span [hidden]="button" class="address">{{address?.street}}, {{address?.city}}, {{address?.country}}</span>

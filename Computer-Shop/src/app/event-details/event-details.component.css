@@ -1,5 +1,5 @@
 .events {    
-    background-color: coral;
+    background-color: rgb(151, 151, 151);
     padding: 5px;
 }
 
@@ -26,6 +26,35 @@ th {
     border-bottom: 0.3em solid #ddd;
 }
 
-tr:nth-child(even){
-    background-color: #dddddd;
+tr:nth-child(even){background-color: #dddddd;}
+
+.label {        
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 80%;
+    font-weight: bold;    
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.3em;
+    background-color: #06c710;
 }
+.true {      
+    background-color: #f0ad4e;    
+}
+
+.false {   
+    background-color: #d10404;    
+}
+
+.right {
+    float: right;
+    margin-left:0.4em;
+}
+
+
+.new { color: rgb(0, 109, 0); }
+.private { color: red; }
+.public { color: rgb(69, 0, 160); }
+.inProgress { color: rgb(38, 0, 255); }
