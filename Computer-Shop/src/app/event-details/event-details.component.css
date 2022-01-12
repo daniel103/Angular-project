@@ -53,8 +53,15 @@ tr:nth-child(even){background-color: #dddddd;}
     margin-left:0.4em;
 }
 
+.big {
+    font-size: 120%;
+}
 
 .new { color: rgb(0, 109, 0); }
 .private { color: red; }
 .public { color: rgb(69, 0, 160); }
 .inProgress { color: rgb(38, 0, 255); }
+
+.hidden {
+    display: none;
+  }

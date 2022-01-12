@@ -1,5 +1,5 @@
-import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '../event.service'
 
 @Component({
   selector: 'app-event-details',
@@ -8,31 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventDetailsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private eventService:EventService) { }
+  //events: any
   ngOnInit(): void {
+    //this.events = this.eventService.getEvents() # build each time we enter the component
   }
-  event = {name: 'New Asus presentation', date: '3/1/2022', time: '10:00', 
-  location: {street:'23 Burla St', city: 'Haifa', country: 'Israel'}}
+  status=true  
+  events = this.eventService.getEvents()  
 
-    events = [
-      {name: 'New Asus presentation', date: '3/1/2022', time: '10:00', location: {street: '23 Burla St', city: 'Haifa', country: 'Israel'}, registration : true, label: 'new'},
-      {name: 'New Gigabyte motherboard', date: '4/1/2022', time: '11:00', location: {street: '23 Burla St', city: 'Haifa', country: 'Israel'}, registration : false, label: 'private'},
-      {name: 'AMD experience', date: '1/11/2022', time: '13:00', location: {street: '123 Lilach St', city: 'Tel-Aviv', country: 'Israel'}, registration : true, label: 'new'},
-      {name: 'Intel experience', date: '1/18/2022', time: '14:00', location: {street: '12 Lilach St', city: 'Tel-Aviv', country: 'Israel'}, registration : false},
-      {name: 'G5 modeling', date: '6/5/2022', time: '9:00', location: {street: '1 Histadrut St', city: 'Ashdod', country: 'Israel'}, registration : true, label: 'public'}
-    ]  
+  getTitleClass(eventFormat:any) {
+    if (eventFormat === 'new') 
+      return ['new']
+    
+    if (eventFormat === 'private')
+      return ['private']
+    
+    if (eventFormat === 'public')
+      return ['public']
+    
+    return ['inProgress']
+  }
 
-    getSwitch(eventSwitch:any) {
-      if (eventSwitch === 'new') 
-        return ['new' ]
-      
-      if (eventSwitch === 'private')
-        return ['private']
-      
-      if (eventSwitch === 'public')
-        return ['public']
-      
-      return [' in progress']
-    }
+  getTitleStyle(eventFormat:any) {
+    if (eventFormat === 'new') 
+      return {color: 'rgb(0, 109, 0)'}
+    
+    if (eventFormat === 'private')
+      return {color: 'red'}
+
+    if (eventFormat === 'public')
+      return {color: 'rgb(69, 0, 160)'}
+    
+    return {color: 'rgb(38, 0, 255)'}
+  }
 }

@@ -1,0 +1,28 @@
+<hr>
+<h2 [ngClass]="getTitleClass(event.label)" [ngStyle]="getTitleStyle(event.label)">{{event?.name}}
+    <span [ngSwitch]="event.label">
+        <span *ngSwitchCase="'new'" class="label">{{event.label}}</span>
+        <span *ngSwitchCase="'private'" class="label">{{event.label}}</span>
+        <span *ngSwitchCase="'public'" class="label">{{event.label}}</span>
+        <span *ngSwitchDefault class="label">in progress</span>
+    </span>&nbsp;
+    <div *ngIf="event.registration; else elseBlock" class="label true">Open for registration</div>
+    <ng-template #elseBlock><div class="label false">Close for registration</div></ng-template>
+</h2>
+<table class="outer">    
+    <tbody>
+      <tr class="events">  
+        <td>Date: {{event?.date | date:'dd-MM-yyy'}} </td>  
+      </tr>
+      <tr class="events">      
+        <td>Time: {{event?.time}}</td>
+      </tr>
+      <tr class="events">
+        <td>                
+            Address: <br><br><app-event-address [address]="event?.location" [status]="status" [class]="'right'"></app-event-address>                
+        </td>
+    </tr>
+    </tbody>
+  </table>
+<br>
+<button (click)="goBack()">Go back</button>

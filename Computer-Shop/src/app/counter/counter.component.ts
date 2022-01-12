@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
+  constructor() { }
+
   stopped = false
   counter = 0
-  intervalId:any
-
+  intervalId: any
+  
   ngOnInit() {
     this.intervalId = setInterval(() => {this.counter++}, 1000)
   }

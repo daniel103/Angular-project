@@ -1,7 +1,10 @@
+<nav>
+  <a routerLink="/home">Home Page</a>    
+  <a routerLink="/events">Our Events</a>      
+</nav>
+
 <h1>{{title}}</h1>
-  <h2>My favorite computer provider is: {{compProvider}}</h2>
-  <app-event-details></app-event-details>
-  <hr>
-  <app-counter #countermain></app-counter>
-  <br><br>
-<button (click)="countermain.stopTimer()">Stop Timer from main component</button>
+  <h2>My favorite computer provider is: <div class="red">{{compProvider}}</div></h2>
+<router-outlet></router-outlet>
+
+  

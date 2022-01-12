@@ -1,12 +1,10 @@
-<div *ngIf="stopped">
-
+<hr>
+<div *ngIf="stopped; else elseBlock">
     <h1>Congratulations!</h1>
-    
     <h3>You stopped the counter component!</h3>
-    
-    </div>
-    
-    <h3>Child Counter: {{counter}}</h3>
+</div>
+<ng-template #elseBlock><h3>To stop counter, click on the button</h3></ng-template>
 
+<h3>Cool Counter: {{counter}}</h3>
 
-    <button (click) = "stopTimer()">Stop Timer</button>
+<button (click)="stopTimer()">Stop Timer</button>

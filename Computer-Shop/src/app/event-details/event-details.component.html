@@ -1,38 +1,42 @@
+<hr>
 <div class="outer">
-  <div>
-      <h1>Welcome to our events!</h1>
-         <h2>Our closest events:</h2>
-         <table class="outer">
-          <thead>
-            <tr class="events">
-              <th>#</th>
-              <th>Event</th>
-              <th>Date</th>      
-              <th>Time</th>
-              <th>Address</th>
-              <th>Registration</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let event of events; let i=index" class="events">
-              <td>{{i+1 | number:'1.1-2'}}</td>
-              <td [ngClass] ="getSwitch(event.label)">{{event?.name}}
-                  <span [ngSwitch]="event.label">
-                      <span *ngSwitchCase="'new'" [ngClass]="'new label'">new</span>
-                      <span *ngSwitchCase="'private'" [ngClass]="'private label'">private</span>
-                      <span *ngSwitchCase="'public'" [ngClass]="'public label'">public</span>
-                      <span *ngSwitchDefault class="label">in progress</span>
-                  </span>
-              <td>{{event?.date | date:'dd-MM-yyy'}} </td>      
-              <td>{{event?.time}}</td>
-              <td>                
-                  <app-event-address [address]="event?.location"></app-event-address>                
-              </td>
-              <td>
-                  <div *ngIf="event.registration; else elseBlock" class="label true">Open for registration</div>
-                  <ng-template #elseBlock><div class="label false">Close for registration</div></ng-template>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-  </div>
+<div>
+    <h1>Welcome to our events!</h1>
+       <h2>Our closest events:</h2>
+       <table class="outer">
+        <thead>
+          <tr class="events">
+            <th>#</th>
+            <th>Event</th>
+            <th>Date</th>      
+            <th>Time</th>
+            <th>Address</th>
+            <th>Registration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events; let i=index" class="events">
+            <td>{{event.id | number:'1.1-2'}}</td>
+            <td>
+              <a [ngClass]="getTitleClass(event.label)" [ngStyle]="getTitleStyle(event.label)" [routerLink]="['eventDetail', event.id]">{{event?.name}}</a>
+                <span [ngSwitch]="event.label">
+                    <span *ngSwitchCase="'new'" class="label right">{{event.label}}</span>
+                    <span *ngSwitchCase="'private'" class="label right">{{event.label}}</span>
+                    <span *ngSwitchCase="'public'" class="label right">{{event.label}}</span>
+                    <span *ngSwitchDefault class="label right">in progress</span>
+                </span>
+            </td>
+            <td>{{event?.date | date:'dd-MM-yyy'}} </td>      
+            <td>{{event?.time}}</td>
+            <td>                
+                <app-event-address [address]="event?.location" [status]="status" [class]="'left'"></app-event-address>                
+            </td>
+            <td>
+                <div *ngIf="event.registration; else elseBlock" class="label true">Open for registration</div>
+                <ng-template #elseBlock><div class="label false">Close for registration</div></ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<br>

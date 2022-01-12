@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
-import { EventAddressComponent } from './event-details/event-address/event-address.component';
+import { EventAddressComponent } from './event-address/event-address.component';
 import { CounterComponent } from './counter/counter.component';
+import { EventService } from './event.service';
+import { RoutesModule } from './routes/routes.module';
+import { ShowEventComponent } from './show-event/show-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventDetailsComponent,
     EventAddressComponent,
-    CounterComponent
+    CounterComponent,
+    ShowEventComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RoutesModule
   ],
-  providers: [],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

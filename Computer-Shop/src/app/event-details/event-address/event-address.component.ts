@@ -7,13 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./event-address.component.css']
 })
 export class EventAddressComponent implements OnInit {
-@Input () address?: any;
-
-button=false
+@Input() address?:any;  
+@Input() status?:boolean;
+@Input() class?:any;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {
+}
 
+getTitleClass() {
+  return this.class;
+  }
 }
