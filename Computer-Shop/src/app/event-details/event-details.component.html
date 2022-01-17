@@ -19,7 +19,7 @@
             <td>{{event.id | number:'1.1-2'}}</td>
             <td>
               <a [ngClass]="getTitleClass(event.label)" [ngStyle]="getTitleStyle(event.label)" [routerLink]="['eventDetail', event.id]">{{event?.name}}</a>
-                <span [ngSwitch]="event.label">
+                <span [ngSwitch]="event?.label">
                     <span *ngSwitchCase="'new'" class="label right">{{event.label}}</span>
                     <span *ngSwitchCase="'private'" class="label right">{{event.label}}</span>
                     <span *ngSwitchCase="'public'" class="label right">{{event.label}}</span>
@@ -32,11 +32,11 @@
                 <app-event-address [address]="event?.location" [status]="status" [class]="'left'"></app-event-address>                
             </td>
             <td>
-                <div *ngIf="event.registration; else elseBlock" class="label true">Open for registration</div>
+                <div *ngIf="event?.registration; else elseBlock" class="label true">Open for registration</div>
                 <ng-template #elseBlock><div class="label false">Close for registration</div></ng-template>
             </td>
           </tr>
         </tbody>
-      </table>
+      </table>      
 </div>
-<br>
+<button [routerLink]="['/events/new']">Create New Event</button>

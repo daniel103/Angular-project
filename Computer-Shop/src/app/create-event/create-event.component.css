@@ -1,0 +1,57 @@
+form { margin-top: 10px; }
+label { display: block; }
+.form-group { margin-top: 5px; }
+
+
+input,select {
+    padding: 0.4em;
+    display: inline-flex;
+  }
+  
+.visitcard {
+  border: navy 2px solid;  
+  border-radius: 10px;
+  background-color: rgb(204, 172, 113);
+  padding: 0.5em 1.3em 0.5em 1.3em;
+  height: max-content;
+  width: max-content;
+}
+
+h2{
+  color: navy;
+  border-bottom: navy 2px solid;
+  padding-bottom: 0.3em;
+}
+
+.form{
+  display  : grid;
+  grid-gap : 10px;
+  grid-template-columns : auto auto;  
+  align-items: center;
+  justify-items: stretch;
+}
+
+label {
+  font-weight: 700;
+}
+
+button {
+  color: #333;
+  background-color: #eee;
+  margin-bottom: 12px;
+  padding: 0.7rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  color: #db0e0e;
+  background-color: #d8d2d2;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+em {color:#E05C65; padding-left:10px;}
+.error input {background-color:#E3C3C5;}

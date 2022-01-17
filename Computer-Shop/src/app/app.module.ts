@@ -8,6 +8,8 @@ import { CounterComponent } from './counter/counter.component';
 import { EventService } from './event.service';
 import { RoutesModule } from './routes/routes.module';
 import { ShowEventComponent } from './show-event/show-event.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { ShowEventComponent } from './show-event/show-event.component';
     EventDetailsComponent,
     EventAddressComponent,
     CounterComponent,
-    ShowEventComponent
+    ShowEventComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RoutesModule
   ],
   providers: [EventService],
